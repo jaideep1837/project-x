@@ -1,7 +1,7 @@
 // Mobile menu toggle
 const toggle = document.querySelector('.mobile-toggle');
-const nav = document.querySelector('nav');
-toggle.addEventListener('click', () => nav.classList.toggle('hidden'));
+const nav = document.querySelector('mobileMenu');
+toggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
 // Example Challenge Data
 const challengeData = {
