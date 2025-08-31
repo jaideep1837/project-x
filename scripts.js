@@ -1,0 +1,186 @@
+// Mobile menu toggle
+const toggle = document.querySelector('.mobile-toggle');
+const nav = document.querySelector('nav');
+toggle.addEventListener('click', () => nav.classList.toggle('hidden'));
+
+// Example Challenge Data
+const challengeData = {
+  step1: {
+    1250: { 
+      profit: "10%", 
+      maxLoss: "6%", 
+      dailyLoss: "4%", 
+      share: "80%", 
+      maxDrawdownType: "Static",
+      dailyDrawdownType: "Higher of previous day equity/balance",
+      time: "Unlimited", 
+      leverage: "FX 1:30",
+      evalMinDays: "3",
+      fundedMinDays: "3",
+      payout: "14 Days",
+      copyTrading: "Yes",
+      prohibited: "Yes"
+    },
+    5000: { 
+      profit: "12%", 
+      maxLoss: "7%", 
+      dailyLoss: "5%", 
+      share: "85%", 
+      maxDrawdownType: "Static",
+      dailyDrawdownType: "Higher of previous day equity/balance",
+      time: "Unlimited", 
+      leverage: "FX 1:30",
+      evalMinDays: "3",
+      fundedMinDays: "3",
+      payout: "14 Days",
+      copyTrading: "Yes",
+      prohibited: "Yes"
+    }
+  },
+  step2: {
+    25000: { 
+      profit: "Phase 1: 10% / Phase 2: 5%", 
+      maxLoss: "10%", 
+      dailyLoss: "5%", 
+      share: "80%", 
+      maxDrawdownType: "Static",
+      dailyDrawdownType: "Higher of previous day equity/balance",
+      time: "Unlimited", 
+      leverage: "FX 1:30",
+      evalMinDays: "3",
+      fundedMinDays: "3",
+      payout: "14 Days",
+      copyTrading: "Yes",
+      prohibited: "Yes"
+    },
+    50000: { 
+      profit: "Phase 1: 8% / Phase 2: 4%", 
+      maxLoss: "10%", 
+      dailyLoss: "5%", 
+      share: "85%", 
+      maxDrawdownType: "Static",
+      dailyDrawdownType: "Higher of previous day equity/balance",
+      time: "Unlimited", 
+      leverage: "FX 1:30",
+      evalMinDays: "3",
+      fundedMinDays: "3",
+      payout: "14 Days",
+      copyTrading: "Yes",
+      prohibited: "Yes"
+    }
+  },
+  rapid: {
+    5000: { 
+      profit: "5%", 
+      maxLoss: "4%", 
+      dailyLoss: "3%", 
+      share: "80%", 
+      maxDrawdownType: "Static",
+      dailyDrawdownType: "Higher of previous day equity/balance",
+      time: "7 Days", 
+      leverage: "FX 1:30",
+      evalMinDays: "3",
+      fundedMinDays: "3",
+      payout: "14 Days",
+      copyTrading: "Yes",
+      prohibited: "Yes"
+    }
+  },
+  instant: {
+    50000: { 
+      profit: "None", 
+      maxLoss: "4%", 
+      dailyLoss: "2%", 
+      share: "80%", 
+      maxDrawdownType: "Static",
+      dailyDrawdownType: "Higher of previous day equity/balance",
+      time: "Unlimited", 
+      leverage: "FX 1:30",
+      evalMinDays: "3",
+      fundedMinDays: "3",
+      payout: "14 Days",
+      copyTrading: "Yes",
+      prohibited: "Yes"
+    }
+  }
+};
+
+let currentStep = "step1";
+let currentSize = "1250";
+
+function renderChallenge() {
+  const data = challengeData[currentStep][currentSize];
+  if (!data) {
+    document.getElementById("challenge-details").innerHTML = `<p class="text-gray-400">No data available.</p>`;
+    return;
+  }
+  document.getElementById("challenge-details").innerHTML = `
+    <table class="w-full text-gray-300">
+      <tr><td class="py-2">Profit Target</td><td>${data.profit}</td></tr>
+      <tr><td class="py-2">Max Total Loss</td><td>${data.maxLoss}</td></tr>
+      <tr><td class="py-2">Daily Loss</td><td>${data.dailyLoss}</td></tr>
+      <tr><td class="py-2">Profit Share</td><td>${data.share}</td></tr>
+      <tr><td class="py-2">Max Drawdown Type</td><td>${data.maxDrawdownType}</td></tr>
+      <tr><td class="py-2">Daily Drawdown Type</td><td>${data.dailyDrawdownType}</td></tr>
+      <tr><td class="py-2">Time Limit</td><td>${data.time}</td></tr>
+      <tr><td class="py-2">Leverage</td><td>${data.leverage}</td></tr>
+      <tr><td class="py-2">Evaluation Min Trading Days</td><td>${data.evalMinDays}</td></tr>
+      <tr><td class="py-2">Funded Min Trading Days</td><td>${data.fundedMinDays}</td></tr>
+      <tr><td class="py-2">Payout Frequency</td><td>${data.payout}</td></tr>
+      <tr><td class="py-2">Account Copy Trading</td><td>${data.copyTrading}</td></tr>
+      <tr><td class="py-2">Prohibited Strategies</td><td>${data.prohibited}</td></tr>
+    </table>
+  `;
+}
+
+
+function updateSizes() {
+    const sizeButtons = document.querySelectorAll(".size-btn");
+    let firstVisible = null;
+
+    sizeButtons.forEach(btn => {
+    const size = btn.dataset.size;
+    if (challengeData[currentStep][size]) {
+        btn.classList.remove("hidden");
+        if (!firstVisible) firstVisible = btn; // pick first available
+    } else {
+        btn.classList.add("hidden");
+    }
+    btn.classList.remove("bg-purple-400");
+    });
+
+    // auto-highlight the first visible option
+    if (firstVisible) {
+    currentSize = firstVisible.dataset.size;
+    firstVisible.classList.add("bg-purple-400");
+    }
+}
+
+// Step buttons
+document.querySelectorAll(".step-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+    // reset styling
+    document.querySelectorAll(".step-btn").forEach(b => b.classList.remove("bg-purple-400"));
+    btn.classList.add("bg-purple-400");
+
+    currentStep = btn.dataset.step;
+    updateSizes();
+    renderChallenge();
+    });
+});
+
+// Size buttons
+document.querySelectorAll(".size-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+    document.querySelectorAll(".size-btn").forEach(b => b.classList.remove("bg-purple-400"));
+    btn.classList.add("bg-purple-400");
+
+    currentSize = btn.dataset.size;
+    renderChallenge();
+    });
+});
+
+// initial render
+document.querySelector(".step-btn[data-step='" + currentStep + "']").classList.add("bg-purple-400");
+updateSizes();
+renderChallenge();
