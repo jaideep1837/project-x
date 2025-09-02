@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prohibited Strategies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <section class="bg-gradient-to-r from-white to-green-600 backdrop-blur-md shadow-sm z-50">
+  <div class="container mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="text-2xl font-bold">
+      SkillTrade<span class="text-green-600">●</span>
+    </h1>
+    <nav class="hidden md:flex gap-6">
+      <a href="/#challenges" class="hover:underline text-white">Challenges</a>
+      <a href="#" class="hover:underline text-white">Affiliate Signup</a>
+      <a href="#" class="hover:underline text-white">English</a>
+    </nav>
+  </div>
+</section>
+
+
+  <!-- Search Bar -->
+  <section class="bg-gradient-to-r from-white to-green-600 py-8">
+    <div class="container mx-auto px-6">
+      <div class="max-w-2xl mx-auto">
+        <input type="text" placeholder="Search for articles..." 
+          class="w-full px-4 py-3 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-purple-400"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="container mx-auto px-40 py-4 text-sm text-gray-500">
+    <a href="#" class="hover:underline">All Collections</a> >
+    <a href="#" class="hover:underline"> Trading Rules & Guidelines</a> >
+    <span class="text-gray-700"> Prohibited Strategies</span>
+  </div>
+
+  <!-- Content Section -->
+  <main class="container mx-auto px-6 py-6 grid md:grid-cols-4 gap-10">
+    
+    <!-- Left Content -->
+    <div class="md:col-span-3 px-40">
+      <h2 class="text-3xl font-bold mb-2">Prohibited Strategies</h2>
+      <p class="text-gray-500 mb-6">Updated over a week ago</p>
+
+      <!-- Gambling Section -->
+    <h2 id="gambling" class="text-2xl font-semibold text-gray-800 mb-3">Gambling:</h2>
+    <p class="mb-6 text-gray-700">
+      You cannot use gambling strategies to pass the challenge phase. 
+      <span class="font-semibold">Blueberry Funded</span> defines gambling as follows:
+    </p>
+
+    <!-- Ordered List -->
+    <ol class="list-decimal list-inside space-y-6">
+      <li>
+        <h4 class="font-semibold text-lg">Excessive Scalping:</h4>
+        <p class="text-gray-700">
+          Holding 50% or more of your trades for less than a minute. This includes Tick Scalping and HFT.
+        </p>
+      </li>
+
+      <li>
+        <h4 class="font-semibold text-lg">Martingale:</h4>
+        <p class="text-gray-700">
+          Trading accounts may not use martingale strategies (progressively increasing lot sizes after losses).
+          <span class="font-semibold">What this means:</span> You cannot respond to losses by placing larger positions
+          in the same asset or correlated assets to attempt to recover previous losses.
+        </p>
+
+        <!-- Sub List -->
+        <p class="font-semibold mt-4">This includes:</p>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Opening larger positions after a losing trade</li>
+          <li>"Doubling down" when positions move against you</li>
+          <li>Pyramiding positions with increasing size in drawdown</li>
+        </ul>
+
+        <!-- Violations -->
+        <p class="font-semibold mt-4">What specifically constitutes a violation:</p>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Opening a new position in the same asset with a larger lot size after a losing trade</li>
+          <li>Increasing position size by 50% or more following losses in the same trading session</li>
+          <li>Establishing a pattern of progressively larger positions during drawdown periods</li>
+          <li>Using multiple accounts to circumvent martingale detection</li>
+          <li>Opening larger positions in highly correlated assets after losses (e.g., switching from EURUSD to EURJPY with increased size)</li>
+        </ul>
+
+        <!-- Enforcement -->
+        <p class="mt-4"><span class="font-semibold">Why we enforce this:</span> Martingale strategies exponentially increase risk and can lead to catastrophic account damage. Our policy protects your capital from unsustainable risk escalation.</p>
+
+        <!-- Position Stacking -->
+        <p class="mt-4 font-semibold">Position Stacking Limitations Rule:</p>
+        <p>Position stacking is strictly limited to maintain appropriate risk distribution.</p>
+
+        <p class="mt-4 font-semibold">Limits:</p>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li><span class="font-semibold">Same Asset Pair:</span> Maximum 4 simultaneous positions per individual asset</li>
+          <li><span class="font-semibold">Multiple Assets:</span> Maximum 7 simultaneous positions across all assets</li>
+        </ul>
+
+        <p class="mt-4 font-semibold">What specifically constitutes a violation:</p>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li><span class="font-semibold">Same Asset Pair:</span> Having 5 or more open positions simultaneously on a single asset pair</li>
+          <li><span class="font-semibold">Multiple Assets:</span> Having 8 or more positions open simultaneously across all trading assets</li>
+          <li>Creating multiple smaller positions to bypass lot size restrictions</li>
+          <li>Opening and closing repetitive positions in the same asset within short time frames to disguise stacking behavior</li>
+          <li>Using grid strategies that automatically open multiple positions beyond the stacking limits</li>
+        </ul>
+
+        <p class="mt-4"><span class="font-semibold">What constitutes position stacking:</span> Multiple open positions in the same direction (or opposing directions) on the same instrument or across correlated instruments.</p>
+        <p><span class="font-semibold">Why these limits exist:</span> Excessive position stacking circumvents lot size restrictions and creates dangerous risk concentration. These limits ensure proper diversification and prevent unintended overexposure to market movements.</p>
+      </li>
+
+      <li>
+        <h4 class="font-semibold text-lg">All In:</h4>
+        <p class="text-gray-700">
+          “All-In Trading Behavior” refers to trading actions where a trader commits an excessively large portion of their account equity on a single trade or series of trades without proper risk management (e.g., no stop-loss). This approach often leads to extreme PnL swings and is seen as high-risk and misaligned with the firm’s goals.
+        </p>
+      </li>
+
+      <li>
+        <h4 class="font-semibold text-lg">Grid Trading:</h4>
+        <p class="text-gray-700">
+          Placing multiple trades at predetermined intervals to create a grid-like structure, with no clear risk management strategy.
+        </p>
+      </li>
+    </ol>
+
+    <!-- Examples -->
+    <h2 id="examples" class="text-2xl font-semibold text-gray-800 mt-10 mb-3">Examples:</h2>
+    <ul class="list-disc list-inside space-y-4 text-gray-700">
+      <li>
+        <h3 class="font-semibold">Excessive Scalping:</h3>
+        <p>A trader executes 60 trades, with 35 of them held for less than 45 seconds. This means more than 50% of their trades are categorized as excessive scalping.</p>
+      </li>
+      <li>
+        <h3 class="font-semibold">Grid Trading:</h3>
+        <p>A trader sets up a grid trading strategy by placing buy orders at intervals of 20 pips and sell orders at intervals of 20 pips without a clear risk management plan or exit strategy.</p>
+      </li>
+      <li>
+        <h3 class="font-semibold">Reverse Hand Post Taking Losses:</h3>
+        <p>This strategy involves chasing losses by entering the opposite direction of a losing trade within a short time frame of closing it. The minimum time to wait before entering a trade in the opposite direction is <span class="font-semibold">5 minutes</span>.</p>
+      </li>
+    </ul>
+
+    <!-- Note -->
+    <h2 id="note" class="text-2xl font-semibold text-gray-800 mt-10 mb-3">Note:</h2>
+    <p class="text-gray-700">
+      A ‘trade’ is defined as a position held on a specific pair, which can include multiple entries with similar timings and lot sizes. If you are found using prohibited strategies, you will not advance to the funded stage and may lose payout eligibility.
+    </p>
+
+    <p class="mt-4 italic">
+      Instant Funding accounts do not receive warnings for violations. Any deviation, intentional or not, will lead to account termination.
+    </p>
+
+    <p class="mt-4">
+      For lot size rules, see: 
+      <a href="#" class="text-purple-600 underline">1 Step</a>, 
+      <a href="#" class="text-purple-600 underline">2 Step</a>, 
+      <a href="#" class="text-purple-600 underline">Instant</a>.
+    </p>
+    </div>
+
+    <!-- Right Sidebar -->
+    <aside class="hidden md:block">
+        <div class="border-l pl-4 text-sm space-y-3 sticky top-24">
+            <a href="#gambling" class="block text-gray-700 hover:text-green-600 font-medium">Gambling</a>
+            <a href="#examples" class="block text-gray-700 hover:text-green-600 font-medium">Examples</a>
+            <a href="#note" class="block text-gray-700 hover:text-green-600 font-medium">Note</a>
+        </div>
+    </aside>
+  </main>
+  <footer class="bg-white py-10">
+  <div class="container mx-auto text-center">
+    <!-- Brand -->
+    <h1 class="text-3xl font-bold">
+      SkillTrade<span class="text-green-600">●</span>
+    </h1>
+
+    <!-- Social Icons -->
+    <div class="flex justify-center gap-6 mt-6 text-gray-500 text-2xl">
+      <a href="#" class="hover:text-green-600"><i class="fab fa-discord"></i></a>
+      <a href="#" class="hover:text-green-600"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="hover:text-green-600"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="hover:text-green-600"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

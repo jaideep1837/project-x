@@ -276,7 +276,7 @@ function renderChallenge() {
       <tr><td class="py-2">Funded Min Trading Days</td><td>${data.fundedMinDays}</td></tr>
       <tr><td class="py-2">Payout Frequency</td><td>${data.payout}</td></tr>
       <tr><td class="py-2">Account Copy Trading</td><td>${data.copyTrading}</td></tr>
-      <tr><td class="py-2">Prohibited Strategies</td><td>${data.prohibited}</td></tr>
+      <tr><td class="py-2">Prohibited Strategies</td><td>${data.prohibited},<a href="#about" class="text-blue-500">Read More</a></td></tr>
     </table>
     `;
     document.getElementById("challenge-fee").innerHTML = `${data.fee}`;
@@ -296,7 +296,7 @@ function renderChallenge() {
       <tr><td class="py-2">Funded Min Trading Days</td><td>${data.fundedMinDays}</td></tr>
       <tr><td class="py-2">Payout Frequency</td><td>${data.payout}</td></tr>
       <tr><td class="py-2">Account Copy Trading</td><td>${data.copyTrading}</td></tr>
-      <tr><td class="py-2">Prohibited Strategies</td><td>${data.prohibited}</td></tr>
+      <tr><td class="py-2">Prohibited Strategies</td><td>${data.prohibited},<a href="/prohibited_strategies.html" class="text-blue-500">Read More</a></td></tr>
     </table>
     `;
     document.getElementById("challenge-fee").innerHTML = `$${data.fee}`;
