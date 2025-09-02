@@ -19,7 +19,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"40.00"
     },
     10000: { 
       profit: "10%", 
@@ -34,7 +35,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"75.00"
     },
     25000: { 
       profit: "10%", 
@@ -49,7 +51,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"150.00"
     },
     50000: { 
       profit: "10%", 
@@ -64,7 +67,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"275.00"
     },
     100000: { 
       profit: "10%", 
@@ -79,7 +83,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"550.00"
     },
     200000: { 
       profit: "10%", 
@@ -94,7 +99,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"1100.00"
     }
   },
   step2: {
@@ -111,7 +117,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"35.00"
     },
     10000: { 
       profit: "Phase 1: 10% & Phase 2: 5%", 
@@ -126,7 +133,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"60.00"
     },
     25000: { 
       profit: "Phase 1: 10% & Phase 2: 5%", 
@@ -141,7 +149,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"125.00"
     },
     50000: { 
       profit: "Phase 1: 10% & Phase 2: 5%", 
@@ -156,7 +165,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"250.00"
     },
     100000: { 
       profit: "Phase 1: 10% & Phase 2: 5%", 
@@ -171,7 +181,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"500.00"
     },
     
   },
@@ -189,7 +200,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"50.00"
     },
     25000: { 
       profit: "5%", 
@@ -204,7 +216,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"100.00"
     },
     50000: { 
       profit: "5%", 
@@ -219,7 +232,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"200.00"
     },
     100000: { 
       profit: "5%", 
@@ -233,7 +247,8 @@ const challengeData = {
       fundedMinDays: "3",
       payout: "14 Days",
       copyTrading: "Yes",
-      prohibited: "Yes"
+      prohibited: "Yes",
+      fee:"300.00"
     },
   }
 };
@@ -264,9 +279,10 @@ function renderChallenge() {
       <tr><td class="py-2">Prohibited Strategies</td><td>${data.prohibited}</td></tr>
     </table>
     `;
-    return;
+    document.getElementById("challenge-fee").innerHTML = `${data.fee}`;
   }
-  document.getElementById("challenge-details").innerHTML = `
+  else{
+    document.getElementById("challenge-details").innerHTML = `
     <table class="w-full text-gray-300">
       <tr><td class="py-2">Profit Target</td><td>${data.profit}</td></tr>
       <tr><td class="py-2">Max Total Loss</td><td>${data.maxLoss}</td></tr>
@@ -282,7 +298,10 @@ function renderChallenge() {
       <tr><td class="py-2">Account Copy Trading</td><td>${data.copyTrading}</td></tr>
       <tr><td class="py-2">Prohibited Strategies</td><td>${data.prohibited}</td></tr>
     </table>
-  `;
+    `;
+    document.getElementById("challenge-fee").innerHTML = `$${data.fee}`;
+  }
+  
 }
 
 
