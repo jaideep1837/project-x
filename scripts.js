@@ -264,7 +264,7 @@ function renderChallenge() {
   }
   if(currentStep=="rapid"){
     document.getElementById("challenge-details").innerHTML = `
-    <table class="w-full text-gray-300">
+    <table class="w-full text-gray-300 table-fixed border-separate border-spacing-x-4">
       <tr><td class="py-2">Profit Target</td><td>${data.profit}</td></tr>
       <tr><td class="py-2">Max Total Loss</td><td>${data.maxLoss}</td></tr>
       <tr><td class="py-2">Daily Loss</td><td>${data.dailyLoss}</td></tr>
@@ -283,7 +283,7 @@ function renderChallenge() {
   }
   else{
     document.getElementById("challenge-details").innerHTML = `
-    <table class="w-full text-gray-300">
+    <table class="w-full text-gray-300 table-fixed border-separate border-spacing-x-4">
       <tr><td class="py-2">Profit Target</td><td>${data.profit}</td></tr>
       <tr><td class="py-2">Max Total Loss</td><td>${data.maxLoss}</td></tr>
       <tr><td class="py-2">Daily Loss</td><td>${data.dailyLoss}</td></tr>
