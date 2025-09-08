@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skill Trade</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <style>
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: linear-gradient(to bottom, #000000, #064e3b, #000000);
+      background-size: 400% 400%;
+      animation: gradientMove 20s ease infinite;
+      color: #f5f5f5;
+    }
+    @keyframes gradientMove {
+      0% { background-position: top; }
+      50% { background-position: bottom; }
+      100% { background-position: top; }
+    }
+  </style>
+</head>
+<body class="text-gray-200">
+
+  <!-- HEADER -->
+  <header class="bg-black/60 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <a href="#" class="text-xl font-bold text-white">SkillTrade <span class="text-green-500">●</span></a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex gap-6 items-center text-gray-200">
+        <a href="#challenges" class="hover:text-green-400">Challenges</a>
+        <a href="#about" class="hover:text-green-400">About</a>
+        <a href="/skilltrade_faqs.html" class="hover:text-green-400">FAQ</a>
+        <a href="#contact" class="hover:text-green-400">Contact</a>
+        <a href="#challenges" class="bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700">Get Funded</a>
+      </nav>
+
+      <!-- Mobile Toggle Button -->
+      <button class="md:hidden text-2xl text-white mobile-toggle">☰</button>
+    </div>
+
+    <!-- Mobile Nav (hidden by default) -->
+    <nav class="hidden md:hidden flex-col bg-black border-t border-gray-700 shadow-md" id="mobileMenu">
+      <a href="#challenges" class="p-4 block hover:text-green-400">Challenges</a>
+      <a href="#about" class="p-4 block hover:text-green-400">About</a>
+      <a href="/skilltrade_faqs.html" class="p-4 block hover:text-green-400">FAQ</a>
+      <a href="#contact" class="p-4 block hover:text-green-400">Contact</a>
+      <a href="#challenges" class="p-4 block bg-green-600 text-white text-center rounded hover:bg-green-700">Get Funded</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <!-- HERO -->
+    <section class="flex flex-col md:flex-row items-center justify-between container mx-auto px-6 py-16 gap-10">
+      <div class="flex-1 space-y-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-snug">
+          Trade with Skill, <br> 
+          <span class="text-green-400">Win with Our Capital.</span>
+        </h1>
+        <p class="text-gray-300">No time limit · Flexible challenges · Leading platforms · Up to $2,00,000 simulated capital</p>
+
+        <div class="flex gap-4">
+          <a href="#challenges" class="bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700">Get Funded</a>
+          <a href="https://discord.com/channels/@skilltrade._27656" class="border border-gray-400 px-6 py-3 rounded-lg hover:bg-gray-700" target="_blank" rel="noopener noreferrer">Join Discord</a>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-6 text-center mt-8">
+          <div>
+            <h3 class="text-2xl font-bold">10k+</h3>
+            <p class="text-gray-400">Active Traders</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold">$2.3M+</h3>
+            <p class="text-gray-400">Total Payouts</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">Up to</h3>
+            <p class="text-gray-400">$2,000,000 Sim</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GIF -->
+      <div class="flex-1">
+        <img src="img6-compressed.gif" alt="Promo GIF" class="rounded-xl shadow-lg w-full">
+      </div>
+    </section>
+
+
+   <!-- 3 Steps Section -->
+    <section class="bg-[#0f0a1f]/80 text-white py-16 relative">
+      <div class="container mx-auto px-6 text-center relative">
+        <!-- Heading -->
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Start earning in only 3 steps</h2>
+        <p class="text-gray-400 mb-12">
+          No time limit · Flexible challenges · Leading platforms · Up to $2,00,000 simulated capital
+        </p>
+
+        <!-- Steps Row -->
+        <div class="grid grid-cols-1 md:grid-cols-3 items-start gap-8 relative">
+          
+          <!-- Step 1 -->
+          <div class="flex flex-col items-center text-center group" data-aos="fade-up" data-aos-delay="30">
+            <div class="bg-green-600 text-white w-12 h-12 flex items-center justify-center rounded-full text-xl">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold group-hover:text-green-400">Step 1</h3>
+            <p class="text-gray-400 mt-2">
+              Select the evaluation you feel comfortable with, and start your trading!
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex flex-col items-center text-center group" data-aos="fade-up" data-aos-delay="50">
+            <div class="bg-green-600 text-white w-12 h-12 flex items-center justify-center rounded-full text-xl">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold group-hover:text-green-400">Step 2</h3>
+            <p class="text-gray-400 mt-2">
+              Successfully complete the evaluation by showcasing consistency and effective risk management.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex flex-col items-center text-center group" data-aos="fade-up" data-aos-delay="70">
+            <div class="bg-green-600 text-white w-12 h-12 flex items-center justify-center rounded-full text-xl">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="mt-6 text-xl font-semibold group-hover:text-green-400">Step 3</h3>
+            <p class="text-gray-400 mt-2">
+              Sign your trader contract and complete the KYC process to become a SkillTrade Funded trader to start trading towards your performance fee!
+            </p>
+          </div>
+        </div>
+
+        <!-- Connecting line -->
+        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-[70%] h-0.5 bg-green-600 top-[120px]"></div>
+      </div>
+    </section>
+
+
+    <!-- CHALLENGES -->
+    <section id="challenges" class="bg-gradient-to-b from-green-900 to-black py-20 text-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-extrabold mb-3">Selecting the top SkillTrade challenge</h2>
+        <p class="text-gray-300 mb-6">No time limit · Flexible challenges · Leading platforms · Up to $2,00,000 simulated capital</p>
+
+        <!-- Step Buttons -->
+        <div class="flex flex-wrap justify-center gap-3 mb-6">
+          <button class="step-btn px-10 py-2 rounded-lg bg-green-800 hover:bg-green-600" data-step="step1">Step 1</button>
+          <button class="step-btn px-10 py-2 rounded-lg bg-green-800 hover:bg-green-600" data-step="step2">Step 2</button>
+          <button class="step-btn px-10 py-2 rounded-lg bg-green-800 hover:bg-green-600" data-step="rapid">Rapid</button>
+        </div>
+
+        <!-- Account Size -->
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+          <button class="size-btn px-4 py-2 rounded-lg bg-green-900 hover:bg-green-700" data-size="5000">$5,000</button>
+          <button class="size-btn px-4 py-2 rounded-lg bg-green-900 hover:bg-green-700" data-size="10000">$10,000</button>
+          <button class="size-btn px-4 py-2 rounded-lg bg-green-900 hover:bg-green-700" data-size="25000">$25,000</button>
+          <button class="size-btn px-4 py-2 rounded-lg bg-green-900 hover:bg-green-700" data-size="50000">$50,000</button>
+          <button class="size-btn px-4 py-2 rounded-lg bg-green-900 hover:bg-green-700" data-size="100000">$100,000</button>
+          <button class="size-btn px-4 py-2 rounded-lg bg-green-900 hover:bg-green-700" data-size="200000">$200,000</button>
+        </div>
+
+        <!-- Challenge Details -->
+        <div id="challenge-details" class="bg-gradient-to-b from-green-900 to-black p-6 rounded-2xl shadow-xl max-w-3xl mx-auto text-left ring-1 ring-green-950">
+          <!-- Dynamic Content Goes Here -->
+        </div>
+
+        <section class="py-4 text-center text-white">
+          <p class="text-sm text-gray-400 mb-6">
+            *Leverage: Index (1:10), Metals/Commodities (1:10), Crypto (1:2)
+          </p>
+          <h2 class="text-2xl font-semibold mb-2">Start Trading</h2>
+          <p id="challenge-fee" class="text-5xl font-extrabold mb-6">$375.00</p>
+          <a href="#challenges"
+            class="inline-block px-8 py-3 bg-gradient-to-r from-green-500 to-green-700 text-white font-semibold rounded-2xl shadow-lg hover:opacity-90 transition duration-200">
+            Get Funded →
+          </a>
+        </section>
+      </div>
+    </section>
+
+
+   <!-- PLATFORMS -->
+    <section class="bg-black py-20 text-center">
+      <div class="container mx-auto px-6">
+        <h3 class="text-white text-4xl font-extrabold mb-3">
+          Trade on industry <br> leading platforms
+        </h3>
+        <p class="text-gray-400 mb-12">
+          No time limit - Flexible challenges - Leading platforms - Up to $2,00,000 simulated capital
+        </p>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="bg-green-800 rounded-2xl shadow-md p-6 flex items-center justify-center">
+            <img src="platform_logo_2.webp" alt="TradeLocker" class="h-12" />
+          </div>
+          <div class="bg-white rounded-2xl shadow-md p-6 flex items-center justify-center">
+            <img src="platform_logo_5.webp" alt="CTrader" class="h-12" />
+          </div>
+          <div class="bg-green-800 rounded-2xl shadow-md p-6 flex items-center justify-center">
+            <img src="platform_logo_4.webp" alt="DX Trade" class="h-12" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="bg-gradient-to-b from-black to-green-900 py-20 text-center">
+      <h2 class="text-white text-4xl font-extrabold mb-6 leading-snug">
+        The Story Behind <br> SkillTrade
+      </h2>
+
+      <div class="max-w-3xl mx-auto text-gray-400 space-y-6 leading-relaxed">
+        <p>
+          <span class="text-white font-semibold">SkillTrade</span> was born from a vision to revolutionize trading and financial technology. 
+          The idea sparked when <span class="text-white font-semibold">Sukhveer Warring</span>, a seasoned Trader and Business Analyst, 
+          recognized the gaps in existing platforms while navigating the markets.
+        </p>
+        <p>
+          With years of trading experience and a keen eye for opportunities, he envisioned a product that would empower traders 
+          and businesses with smarter, more reliable tools. To bring this vision to life, he joined hands with 
+          <span class="text-white font-semibold">Jaideep Singh</span>, an <span class="italic">IIT Roorkee alumnus</span> who has 
+          successfully delivered multiple production-level projects across domains.
+        </p>
+        <p>
+          Together, they combined market expertise with technical innovation, laying the foundation for 
+          <span class="text-white font-semibold">Project-X</span> — a startup dedicated to building powerful, scalable, 
+          and user-centric solutions for the trading ecosystem.
+        </p>
+        <p>
+          At its core, <span class="text-white font-semibold">SkillTrade</span> aims to bridge the world of finance and technology, 
+          simplifying complex trading processes and helping individuals and businesses make confident, data-driven decisions.
+        </p>
+      </div>
+
+      <a href="#contact" 
+        class="mt-6 inline-block bg-green-600 hover:bg-green-500 text-white px-5 py-2 rounded-xl font-medium shadow-md transition">
+        Get in Touch
+      </a>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12">
+        
+        <!-- About -->
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4">Skill<span class="text-green-500">Trade</span></h2>
+          <p class="mb-6">SkillTrade is a prop firm, where we aim to take on the prop trading space by providing sustainable trading challenges with customer service, technology, and efficient payouts.</p>
+
+          <div>
+            <span class="block mb-2 font-semibold">Join Socials</span>
+            <div class="flex gap-4 text-xl">
+              <a href="https://www.instagram.com/skil.ltrade41/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://discord.com/channels/@skilltrade._27656" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <h4 class="font-semibold text-white mb-3">Main Home</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-white">Home</a></li>
+              <li><a href="#about" class="hover:text-white">About</a></li>
+              <li><a href="/skilltrade_faqs.html" class="hover:text-white">FAQ</a></li>
+              <li><a href="/skilltrade_affiliate.html" class="hover:text-white">Affiliate</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-white mb-3">Legal</h4>
+            <ul class="space-y-2">
+              <li><a href="/skilltrade_privacy_policy.html" class="hover:text-white">Privacy Policy</a></li>
+              <li><a href="/skilltrade_terms_conditions.html" class="hover:text-white">Terms & Conditions</a></li>
+              <li><a href="/skilltrade_outline_fee.html" class="hover:text-white">Outline & Fees</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="scripts.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: false
+    });
+  </script>
+</body>
+</html>

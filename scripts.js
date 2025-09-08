@@ -279,7 +279,7 @@ function renderChallenge() {
       <tr><td class="py-2">Prohibited Strategies</td><td>${data.prohibited},<a href="#about" class="text-blue-500">Read More</a></td></tr>
     </table>
     `;
-    document.getElementById("challenge-fee").innerHTML = `${data.fee}`;
+    document.getElementById("challenge-fee").innerHTML = `$${data.fee}`;
   }
   else{
     document.getElementById("challenge-details").innerHTML = `
