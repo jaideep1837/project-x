@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillTrade</title>
+
+  <!-- Tailwind & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="text-gray-200 bg-black">
+
+  <!-- HEADER -->
+  <header class="bg-black/60 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <a href="/" class="text-xl font-bold text-white">SkillTrade <span class="text-green-500">●</span></a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex gap-6 items-center text-gray-200">
+        <a href="/#challenges" class="hover:text-green-400">Challenges</a>
+        <a href="/#about" class="hover:text-green-400">About</a>
+        <a href="/skilltrade_faqs.html" class="hover:text-green-400">FAQ</a>
+        <a href="#footer" class="hover:text-green-400">Contact</a>
+        <a href="/#challenges" class="bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700">Get Funded</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="md:hidden text-2xl text-white mobile-toggle">☰</button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav class="hidden md:hidden flex-col bg-black border-t border-gray-700 shadow-md" id="mobileMenu">
+      <a href="/#challenges" class="p-4 block hover:text-green-400">Challenges</a>
+      <a href="/#about" class="p-4 block hover:text-green-400">About</a>
+      <a href="/skilltrade_faqs.html" class="p-4 block hover:text-green-400">FAQ</a>
+      <a href="#footer" class="p-4 block hover:text-green-400">Contact</a>
+      <a href="/#challenges" class="p-4 block bg-green-600 text-white text-center rounded hover:bg-green-700">Get Funded</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="min-h-screen bg-gradient-to-b from-black to-green-900 py-16">
+    <div class="container mx-auto px-6 text-white">
+        <h1 class="text-4xl font-extrabold text-center mb-12">Affiliate Levels</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- Spark -->
+        <div class="bg-gray-900 shadow-md hover:shadow-xl transition rounded-2xl p-8 border-t-4 border-orange-500">
+            <h2 class="text-2xl font-bold text-orange-400 mb-4">Spark</h2>
+            <ul class="space-y-2 text-gray-300">
+            <li><strong>Referrals:</strong> 0–25</li>
+            <li><strong>Commission:</strong> 12.5%</li>
+            <li><strong>Recurring Commissions:</strong> 5%</li>
+            <li><strong>Rewards:</strong> <span class="italic text-gray-500">Need to Scale Up!</span></li>
+            </ul>
+        </div>
+
+        <!-- Boost -->
+        <div class="bg-gray-900 shadow-md hover:shadow-xl transition rounded-2xl p-8 border-t-4 border-blue-500">
+            <h2 class="text-2xl font-bold text-blue-400 mb-4">Boost</h2>
+            <ul class="space-y-2 text-gray-300">
+            <li><strong>Referrals:</strong> 26–75</li>
+            <li><strong>Commission:</strong> 15%</li>
+            <li><strong>Recurring Commissions:</strong> 5%</li>
+            <li><strong>Rewards:</strong>
+                <ul class="list-disc list-inside ml-3 space-y-1">
+                <li>1× 10k 2-Step Challenge Account</li>
+                <li>3× 5k Giveaway for the partner’s community</li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+
+        <!-- Momentum -->
+        <div class="bg-gray-900 shadow-md hover:shadow-xl transition rounded-2xl p-8 border-t-4 border-green-600">
+            <h2 class="text-2xl font-bold text-green-400 mb-4">Momentum</h2>
+            <ul class="space-y-2 text-gray-300">
+            <li><strong>Referrals:</strong> 76–150</li>
+            <li><strong>Commission:</strong> 17.5%</li>
+            <li><strong>Recurring Commissions:</strong> 7.5%</li>
+            <li><strong>Rewards:</strong>
+                <ul class="list-disc list-inside ml-3 space-y-1">
+                <li>Dedicated 15% Discount Code</li>
+                <li>1× 25k 2-Step Challenge Account</li>
+                <li>5× 5k Giveaway for the partner’s community</li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+
+        <!-- Zenith -->
+        <div class="bg-gray-900 shadow-md hover:shadow-xl transition rounded-2xl p-8 border-t-4 border-purple-600">
+            <h2 class="text-2xl font-bold text-purple-400 mb-4">Zenith</h2>
+            <ul class="space-y-2 text-gray-300">
+            <li><strong>Referrals:</strong> 151–225</li>
+            <li><strong>Commission:</strong> 20%</li>
+            <li><strong>Recurring Commissions:</strong> 10%</li>
+            <li><strong>Rewards:</strong>
+                <ul class="list-disc list-inside ml-3 space-y-1">
+                <li>Dedicated 15% Discount Code</li>
+                <li>1× 50k 2-Step Challenge Account</li>
+                <li>3× 10k Giveaway for the partner’s community</li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+
+        <!-- Pinnacle -->
+        <div class="bg-gray-900 shadow-md hover:shadow-xl transition rounded-2xl p-8 border-t-4 border-red-600">
+            <h2 class="text-2xl font-bold text-red-400 mb-4">Pinnacle</h2>
+            <ul class="space-y-2 text-gray-300">
+            <li><strong>Referrals:</strong> 226+</li>
+            <li><strong>Commission:</strong> 20%</li>
+            <li><strong>Recurring Commissions:</strong> 10%</li>
+            <li><strong>Rewards:</strong>
+                <ul class="list-disc list-inside ml-3 space-y-1">
+                <li>Dedicated 20% Discount Code</li>
+                <li>1× 100k 2-Step Challenge Account</li>
+                <li>5× 10k Giveaway for the partner’s community</li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+
+        </div>
+    </div>
+    </main>
+
+
+
+
+  <!-- FOOTER -->
+  <footer id="footer" class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
+      
+      <!-- About -->
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">Skill<span class="text-green-500">Trade</span></h2>
+        <p class="mb-6">SkillTrade is a prop firm, where we aim to take on the prop trading space by providing sustainable trading challenges with customer service, technology, and efficient payouts.</p>
+
+        <div>
+          <span class="block mb-2 font-semibold">Join Socials</span>
+          <div class="flex gap-4 text-xl">
+            <a href="https://www.instagram.com/skil.ltrade41/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://discord.com/channels/@skilltrade._27656" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <h4 class="font-semibold text-white mb-3">Main</h4>
+          <ul class="space-y-2">
+            <li><a href="/" class="hover:text-white">Home</a></li>
+            <li><a href="/#about" class="hover:text-white">About</a></li>
+            <li><a href="/skilltrade_faqs.html" class="hover:text-white">FAQ</a></li>
+            <li><a href="/skilltrade_affiliate.html" class="hover:text-white">Affiliate</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white mb-3">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="/skilltrade_privacy_policy.html" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="/skilltrade_terms_conditions.html" class="hover:text-white">Terms & Conditions</a></li>
+            <li><a href="/skilltrade_outline_fee.html" class="hover:text-white">Outline & Fees</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="font-semibold text-white mb-3">Contact</h4>
+        <p class="mb-2">Have questions? Reach us at:</p>
+        <a href="mailto:sukhveer@skilltrade.in" class="text-green-400 hover:text-green-300">
+          sukhveer@skilltrade.in
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: false });
+  </script>
+</body>
+</html>
