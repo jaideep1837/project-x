@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero with Flowing Stars</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Hero section */
+    .hero {
+      position: relative;
+      height: 100vh; /* full screen height */
+      overflow: hidden;
+      background: linear-gradient(to bottom, #000000, #004d00, #000000);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 10px;
+    }
+
+    /* Star styles */
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: drift linear infinite, twinkle ease-in-out infinite;
+    }
+
+    @keyframes drift {
+      from { transform: translateX(0); }
+      to { transform: translateX(100vw); }
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to the Stars ✨</h1>
+    <p>Flowing & twinkling stars inside this hero section</p>
+  </section>
+
+  <script>
+    const hero = document.querySelector(".hero");
+    const starCount = 150;
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement("div");
+      star.className = "star";
+      
+      // Random size
+      const size = Math.random() * 2 + 1; 
+      star.style.width = star.style.height = size + "px";
+      
+      // Random position inside hero
+      star.style.top = Math.random() * hero.clientHeight + "px";
+      star.style.left = Math.random() * hero.clientWidth + "px";
+      
+      // Drift speed
+      const driftDuration = 30 + Math.random() * 40;
+      const driftDelay = Math.random() * -driftDuration;
+      star.style.animationDuration = `${driftDuration}s, ${3 + Math.random() * 5}s`; 
+      star.style.animationDelay = `${driftDelay}s, ${Math.random() * 5}s`; 
+      
+      hero.appendChild(star);
+    }
+  </script>
+</body>
+</html>

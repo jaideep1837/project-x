@@ -355,3 +355,50 @@ document.querySelectorAll(".size-btn").forEach(btn => {
 document.querySelector(".step-btn[data-step='" + currentStep + "']").classList.add("bg-green-400");
 updateSizes();
 renderChallenge();
+
+
+
+// Star pattern
+//---------------------------------------------------------------------------
+
+const heroStarsContainer = document.getElementById("hero-stars");
+const starCount = 120;
+const stars = [];
+
+for (let i = 0; i < starCount; i++) {
+  const star = document.createElement("div");
+  star.className = "star";
+
+  // random size
+  const size = Math.random() * 2 + 1;
+  star.style.width = star.style.height = size + "px";
+
+  // random position inside hero
+  star.style.top = Math.random() * heroStarsContainer.clientHeight + "px";
+  star.style.left = Math.random() * heroStarsContainer.clientWidth + "px";
+
+  // drift + twinkle durations
+  const driftDuration = 40 + Math.random() * 40;
+  const driftDelay = Math.random() * -driftDuration;
+  const twinkleDuration = 3 + Math.random() * 5;
+  const twinkleDelay = Math.random() * 5;
+
+  star.style.animationDuration = `${driftDuration}s, ${twinkleDuration}s`;
+  star.style.animationDelay = `${driftDelay}s, ${twinkleDelay}s`;
+
+  heroStarsContainer.appendChild(star);
+  stars.push(star);
+}
+
+// Cursor parallax effect
+document.addEventListener("mousemove", (e) => {
+  const { innerWidth, innerHeight } = window;
+  const offsetX = (e.clientX / innerWidth - 0.5) * 40;
+  const offsetY = (e.clientY / innerHeight - 0.5) * 40;
+
+  stars.forEach((star, i) => {
+    const depth = (i % 5) + 1;
+    star.style.setProperty("--offsetX", `${offsetX / depth}px`);
+    star.style.setProperty("--offsetY", `${offsetY / depth}px`);
+  });
+});
