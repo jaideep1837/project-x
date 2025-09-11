@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillTrade</title>
+
+  <!-- Tailwind & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="text-gray-200 bg-black">
+
+  <!-- HEADER -->
+  <header class="bg-black/60 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <a href="/" class="text-xl font-bold text-white">SkillTrade <span class="text-green-500">●</span></a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex gap-6 items-center text-gray-200">
+        <a href="/#challenges" class="hover:text-green-400">Challenges</a>
+        <a href="/#about" class="hover:text-green-400">About</a>
+        <a href="/skilltrade_faqs.html" class="hover:text-green-400">FAQ</a>
+        <a href="#footer" class="hover:text-green-400">Contact</a>
+        <a href="/#challenges" class="bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700">Get Funded</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="md:hidden text-2xl text-white mobile-toggle">☰</button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav class="hidden md:hidden flex-col bg-black border-t border-gray-700 shadow-md" id="mobileMenu">
+      <a href="/#challenges" class="p-4 block hover:text-green-400">Challenges</a>
+      <a href="/#about" class="p-4 block hover:text-green-400">About</a>
+      <a href="/skilltrade_faqs.html" class="p-4 block hover:text-green-400">FAQ</a>
+      <a href="#footer" class="p-4 block hover:text-green-400">Contact</a>
+      <a href="/#challenges" class="p-4 block bg-green-600 text-white text-center rounded hover:bg-green-700">Get Funded</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="min-h-screen bg-gradient-to-b from-black to-green-900 py-16">
+  <div class="container mx-auto px-6 lg:px-20 text-white">
+    <h1 class="text-4xl font-extrabold mb-6">1 Step – Lot Size Restriction Rule</h1>
+    <p class="text-gray-300 mb-8">Updated over a week ago</p>
+
+    <h2 class="text-2xl font-semibold mb-4">Question: Do you have a Lot Size Rule Restriction?</h2>
+    <p class="mb-6">Answer: <span class="font-semibold text-green-400">Yes We Do!</span></p>
+
+    <h2 class="text-2xl font-semibold mb-4">What are our lot size restrictions and how do they work?</h2>
+    <p class="mb-6 text-gray-200">
+      Our lot size restriction framework protects your capital by limiting position sizes based on your account balance. 
+      We've established maximum lot sizes for each major asset class that scale proportionally as your account grows. 
+      For standard accounts, we use a tiered approach across six account levels: 
+      <span class="font-semibold text-green-400">$5,000, $10,000, $25,000, $50,000, $100,000, and $200,000</span>.
+    </p>
+
+    <p class="mt-8 text-lg font-medium text-green-300">
+      Here are the maximum lot sizes for all our major assets:
+    </p>
+
+    <h1 class="text-4xl font-extrabold mb-8">Asset Class Lot Size Restriction</h1>
+
+    <div class="overflow-x-auto bg-white text-gray-800 rounded-lg shadow-lg">
+      <table class="min-w-full text-sm text-center border border-gray-200">
+        <thead class="bg-green-800 text-white">
+          <tr>
+            <th class="px-4 py-3 border">Account Size</th>
+            <th class="px-4 py-3 border">$5,000</th>
+            <th class="px-4 py-3 border">$10,000</th>
+            <th class="px-4 py-3 border">$25,000</th>
+            <th class="px-4 py-3 border">$50,000</th>
+            <th class="px-4 py-3 border">$100,000</th>
+            <th class="px-4 py-3 border">$200,000</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="px-4 py-2 border font-semibold">XAU/USD</td>
+            <td class="border">~0.10 lots</td>
+            <td class="border">~0.20 lots</td>
+            <td class="border">~0.5 lots</td>
+            <td class="border">~1 lots</td>
+            <td class="border">~2 lots</td>
+            <td class="border">~4 lots</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border font-semibold">XAG/USD</td>
+            <td class="border">~0.2 lots</td>
+            <td class="border">~0.4 lots</td>
+            <td class="border">~1.0 lots</td>
+            <td class="border">~2.0 lots</td>
+            <td class="border">~4.0 lots</td>
+            <td class="border">~8.0 lots</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border font-semibold">DJ30</td>
+            <td class="border">~0.05 lots</td>
+            <td class="border">~0.1 lots</td>
+            <td class="border">~0.25 lots</td>
+            <td class="border">~1 lots</td>
+            <td class="border">~2 lots</td>
+            <td class="border">~4 lots</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border font-semibold">NAS100</td>
+            <td class="border">~0.1 lots</td>
+            <td class="border">~0.2 lots</td>
+            <td class="border">~0.5 lots</td>
+            <td class="border">~1 lots</td>
+            <td class="border">~2 lots</td>
+            <td class="border">~4 lots</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border font-semibold">SP500</td>
+            <td class="border">~0.4 lots</td>
+            <td class="border">~0.8 lots</td>
+            <td class="border">~2 lots</td>
+            <td class="border">~4 lots</td>
+            <td class="border">~8 lots</td>
+            <td class="border">~16 lots</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border font-semibold">GER40</td>
+            <td class="border">~0.1 lots</td>
+            <td class="border">~0.2 lots</td>
+            <td class="border">~0.5 lots</td>
+            <td class="border">~1 lots</td>
+            <td class="border">~2 lots</td>
+            <td class="border">~4 lots</td>
+          </tr>
+          <tr class="bg-green-50">
+            <td class="px-4 py-2 border font-semibold">BTC/USD</td>
+            <td class="border">~0.05 lots</td>
+            <td class="border">~0.1 lots</td>
+            <td class="border">~0.25 lots</td>
+            <td class="border">~1 lots</td>
+            <td class="border">~1 lots</td>
+            <td class="border">~2 lots</td>
+          </tr>
+          <tr class="bg-green-50">
+            <td class="px-4 py-2 border font-semibold">ETH/USD</td>
+            <td class="border">~2 lots</td>
+            <td class="border">~4 lots</td>
+            <td class="border">~10 lots</td>
+            <td class="border">~20 lots</td>
+            <td class="border">~40 lots</td>
+            <td class="border">~80 lots</td>
+          </tr>
+          <tr class="bg-green-50">
+            <td class="px-4 py-2 border font-semibold">SOL/USD</td>
+            <td class="border">~2 lots</td>
+            <td class="border">~4 lots</td>
+            <td class="border">~10 lots</td>
+            <td class="border">~20 lots</td>
+            <td class="border">~40 lots</td>
+            <td class="border">~80 lots</td>
+          </tr>
+          <tr class="bg-red-50">
+            <td class="px-4 py-2 border font-semibold">FOREX</td>
+            <td class="border">~0.6 lots</td>
+            <td class="border">~1.2 lots</td>
+            <td class="border">~3 lots</td>
+            <td class="border">~6 lots</td>
+            <td class="border">~12 lots</td>
+            <td class="border">~24 lots</td>
+          </tr>
+          <tr class="bg-yellow-50">
+            <td class="px-4 py-2 border font-semibold">Other Indices</td>
+            <td class="border">~0.3 lots</td>
+            <td class="border">~0.6 lots</td>
+            <td class="border">~1.5 lots</td>
+            <td class="border">~3 lots</td>
+            <td class="border">~6 lots</td>
+            <td class="border">~12 lots</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border font-semibold">WTI/BRENT</td>
+            <td class="border">~4.5 lots</td>
+            <td class="border">~9 lots</td>
+            <td class="border">~22.5 lots</td>
+            <td class="border">~45 lots</td>
+            <td class="border">~90 lots</td>
+            <td class="border">~180 lots</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 border font-semibold">JP225</td>
+            <td class="border">~0.7 lots</td>
+            <td class="border">~1.4 lots</td>
+            <td class="border">~3.5 lots</td>
+            <td class="border">~7 lots</td>
+            <td class="border">~14 lots</td>
+            <td class="border">~28 lots</td>
+          </tr>
+          <tr class="bg-green-50">
+            <td class="px-4 py-2 border font-semibold">Other Cryptos</td>
+            <td class="border">~5 lots</td>
+            <td class="border">~10 lots</td>
+            <td class="border">~25 lots</td>
+            <td class="border">~50 lots</td>
+            <td class="border">~100 lots</td>
+            <td class="border">~200 lots</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mt-6 text-gray-300 italic">
+      Please note that the Synthetic Plan is exempt from Lot Size Restrictions.
+    </p>
+
+    <h2 class="text-3xl font-bold mb-4">What Happens If You Exceed Lot Size Limits?</h2>
+    <p class="mb-6 text-gray-200">
+      Exceeding the lot size limits is considered a violation. There are no automatic restrictions within the trading platform that prevent traders from entering trades above allowed limits. Therefore, it is crucial to double-check your lot sizes before executing any trade. Violations are addressed with a risk review, which typically occurs after the completion of your trading phase. During this review, the risk assessment team determines the severity of the breach and whether penalties, including account breaches, account closures, or warnings, are applicable.
+    </p>
+
+    <h2 class="text-2xl font-semibold mb-3">One-Time or Accidental Breaches</h2>
+    <p class="mb-6 text-gray-200">
+      If the breach was unintentional or a one-time occurrence, and corrective action was taken promptly (such as immediately closing the exceeding position), this is often factored into the risk team's decision-making. Outcomes for such cases are likely to be less severe, such as issuing a warning rather than imposing strict penalties. However, recurrence or failure to rectify the issue promptly could lead to more serious actions.
+    </p>
+
+    <h2 class="text-2xl font-semibold mb-3">Serious Breaches</h2>
+    <p class="mb-6 text-gray-200">
+      A breach exceeding significantly above the max lot size limit is considered a hard breach and usually results in more serious consequences. For example, if your account is permitted a 
+      <span class="font-semibold text-green-400">0.6 Forex lot maximum</span> but you open a 
+      <span class="font-semibold text-red-400">0.9 position</span> instead, it will count as a violation, and your account may be flagged for review. You will be contacted after your phase ends regarding the risk team's decision.
+    </p>
+
+    <h2 class="text-2xl font-semibold mb-3">Continuity of Trading After a Violation</h2>
+    <p class="mb-6 text-gray-200">
+      In most cases involving violations, traders are allowed to continue trading until the current phase is completed. Immediate cessation of trading only arises in specific scenarios involving highly significant breaches. For ongoing compliance, it's strongly recommended to carefully review each trade and ensure it adheres to account-specific maximum lot size rules. This approach minimizes risks and allows seamless progress across trading phases.
+    </p>
+
+    <p class="mt-6 text-gray-300">
+      If you have any questions or need further clarification, feel free to reach out to us via 
+      <span class="text-green-400 font-semibold">Live Chat</span> or email at 
+      <a href="mailto:sukhveer@skilltrade.in" class="underline text-green-400">sukhveer@skilltrade.in</a>.
+    </p>
+  </div>
+</main>
+
+
+
+
+  <!-- FOOTER -->
+  <footer id="footer" class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
+      
+      <!-- About -->
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">Skill<span class="text-green-500">Trade</span></h2>
+        <p class="mb-6">SkillTrade is a prop firm, where we aim to take on the prop trading space by providing sustainable trading challenges with customer service, technology, and efficient payouts.</p>
+
+        <div>
+          <span class="block mb-2 font-semibold">Join Socials</span>
+          <div class="flex gap-4 text-xl">
+            <a href="https://www.instagram.com/skil.ltrade41/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://discord.com/channels/@skilltrade._27656" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <h4 class="font-semibold text-white mb-3">Main</h4>
+          <ul class="space-y-2">
+            <li><a href="/" class="hover:text-white">Home</a></li>
+            <li><a href="/#about" class="hover:text-white">About</a></li>
+            <li><a href="/skilltrade_faqs.html" class="hover:text-white">FAQ</a></li>
+            <li><a href="/skilltrade_affiliate.html" class="hover:text-white">Affiliate</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white mb-3">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="/skilltrade_privacy_policy.html" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="/skilltrade_terms_conditions.html" class="hover:text-white">Terms & Conditions</a></li>
+            <li><a href="/skilltrade_outline_fee.html" class="hover:text-white">Outline & Fees</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="font-semibold text-white mb-3">Contact</h4>
+        <p class="mb-2">Have questions? Reach us at:</p>
+        <a href="mailto:sukhveer@skilltrade.in" class="text-green-400 hover:text-green-300">
+          sukhveer@skilltrade.in
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: false });
+  </script>
+</body>
+</html>
