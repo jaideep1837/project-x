@@ -18,11 +18,38 @@
       animation: gradientMove 20s ease infinite;
       color: #f5f5f5;
     }
-    @keyframes gradientMove {
+    /* @keyframes gradientMove {
       0% { background-position: top; }
       50% { background-position: bottom; }
       100% { background-position: top; }
+    } */
+    
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+
+      --offsetX: 0px;
+      --offsetY: 0px;
+      --driftX: 0px;
+
+      transform: translate(var(--driftX), var(--offsetY)) translate(var(--offsetX), 0);
+      animation: drift linear infinite, twinkle ease-in-out infinite;
     }
+
+    /* Drift left → right, stored in --driftX */
+    @keyframes drift {
+      from { --driftX: 0px; }
+      to   { --driftX: 100vw; }
+    }
+
+    /* Twinkle effect */
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
   </style>
 </head>
 <body class="text-gray-200">
@@ -58,76 +85,71 @@
 
   <main>
     <!-- HERO -->
-<section class="relative flex items-center justify-center text-center px-6 py-20 min-h-screen overflow-hidden">
-  <!-- Background GIF -->
-  <div class="absolute inset-0">
-    <img src="img7.gif" alt="Promo GIF" class="w-full h-full object-cover">
-    <!-- Dark overlay for readability -->
-    <div class="absolute inset-0 bg-black/60"></div>
-  </div>
+    <section class="relative flex items-center justify-center text-center container mx-auto px-6 py-24 min-h-[90vh] overflow-hidden">
+      <!-- Stars -->
+      <div id="hero-stars" class="absolute inset-0 pointer-events-none"></div>
 
-  <!-- Hero Content -->
-  <div class="relative z-10 max-w-4xl mx-auto space-y-8 text-white">
-    <h1 class="text-4xl md:text-6xl font-extrabold leading-snug">
-      Trade with Skill, <br> 
-      <span class="text-green-400">Win with Our Capital.</span>
-    </h1>
-    <p class="text-gray-200 text-lg md:text-xl">
-      No time limit · Flexible challenges · Leading platforms · Up to $2,00,000 simulated capital
-    </p>
+      <!-- Hero Content -->
+      <div class="relative z-10 max-w-3xl space-y-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-snug">
+          Trade with Skill, <br> 
+          <span class="text-green-400">Win with Our Capital.</span>
+        </h1>
+        <p class="text-gray-300 text-lg md:text-xl">
+          No time limit · Flexible challenges · Leading platforms · Up to $2,00,000 simulated capital
+        </p>
 
-    <!-- Stats -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mt-10">
-      <div>
-        <div class="flex justify-center mb-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6v4a2 2 0 002 2h12a2 2 0 002-2V6M4 6a2 2 0 012-2h12a2 2 0 012 2M4 10v8a2 2 0 002 2h12a2 2 0 002-2v-8" />
-          </svg>
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mt-10">
+          <div>
+            <div class="flex justify-center mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6v4a2 2 0 002 2h12a2 2 0 002-2V6M4 6a2 2 0 012-2h12a2 2 0 012 2M4 10v8a2 2 0 002 2h12a2 2 0 002-2v-8" />
+              </svg>
+            </div>
+            <h3 class="font-bold">Up to 95%</h3>
+            <p class="text-gray-400">Performance Reward</p>
+          </div>
+
+          <div>
+            <div class="flex justify-center mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16M4 6h16M4 18h16" />
+              </svg>
+            </div>
+            <h3 class="font-bold">Up to $300k</h3>
+            <p class="text-gray-400">Simulated Accounts</p>
+          </div>
+
+          <div>
+            <div class="flex justify-center mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.5 0-3 .5-3 2s1.5 2 3 2 3 .5 3 2-1.5 2-3 2m0-10v10" />
+              </svg>
+            </div>
+            <h3 class="font-bold">24 Hours</h3>
+            <p class="text-gray-400">Guaranteed Reward</p>
+          </div>
+
+          <div>
+            <div class="flex justify-center mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400 animate-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+              </svg>
+            </div>
+            <h3 class="font-bold">No time limit</h3>
+            <p class="text-gray-400">in Challenge Phase</p>
+          </div>
         </div>
-        <h3 class="font-bold">Up to 95%</h3>
-        <p class="text-gray-300">Performance Reward</p>
-      </div>
 
-      <div>
-        <div class="flex justify-center mb-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16M4 6h16M4 18h16" />
-          </svg>
+        <!-- Buttons -->
+        <div class="flex justify-center gap-4 mt-10">
+          <a href="#challenges" class="bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700">Get Funded</a>
+          <a href="https://discord.com/channels/@skilltrade._27656" class="border border-gray-400 px-6 py-3 rounded-lg hover:bg-gray-700" target="_blank" rel="noopener noreferrer">Join Discord</a>
         </div>
-        <h3 class="font-bold">Up to $300k</h3>
-        <p class="text-gray-300">Simulated Accounts</p>
       </div>
-
-      <div>
-        <div class="flex justify-center mb-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.5 0-3 .5-3 2s1.5 2 3 2 3 .5 3 2-1.5 2-3 2m0-10v10" />
-          </svg>
-        </div>
-        <h3 class="font-bold">24 Hours</h3>
-        <p class="text-gray-300">Guaranteed Reward</p>
-      </div>
-
-      <div>
-        <div class="flex justify-center mb-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400 animate-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
-          </svg>
-        </div>
-        <h3 class="font-bold">No time limit</h3>
-        <p class="text-gray-300">in Challenge Phase</p>
-      </div>
-    </div>
-
-    <!-- Buttons -->
-    <div class="flex justify-center gap-4 mt-10">
-      <a href="#challenges" class="bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700">Get Funded</a>
-      <a href="https://discord.com/channels/@skilltrade._27656" class="border border-gray-400 px-6 py-3 rounded-lg hover:bg-gray-700" target="_blank" rel="noopener noreferrer">Join Discord</a>
-    </div>
-  </div>
-</section>
-
+    </section>
 
 
 
