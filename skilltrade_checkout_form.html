@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillTrade</title>
+
+  <!-- Tailwind & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="text-gray-200 bg-black">
+
+  <!-- HEADER -->
+  <header class="bg-black/60 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <a href="/" class="text-xl font-bold text-white">SkillTrade <span class="text-green-500">●</span></a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex gap-6 items-center text-gray-200">
+        <a href="/#challenges" class="hover:text-green-400">Challenges</a>
+        <a href="/#about" class="hover:text-green-400">About</a>
+        <a href="/skilltrade_faqs.html" class="hover:text-green-400">FAQ</a>
+        <a href="#footer" class="hover:text-green-400">Contact</a>
+        <a href="/#challenges" class="bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700">Get Funded</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button class="md:hidden text-2xl text-white mobile-toggle">☰</button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav class="hidden md:hidden flex-col bg-black border-t border-gray-700 shadow-md" id="mobileMenu">
+      <a href="/#challenges" class="p-4 block hover:text-green-400">Challenges</a>
+      <a href="/#about" class="p-4 block hover:text-green-400">About</a>
+      <a href="/skilltrade_faqs.html" class="p-4 block hover:text-green-400">FAQ</a>
+      <a href="#footer" class="p-4 block hover:text-green-400">Contact</a>
+      <a href="/#challenges" class="p-4 block bg-green-600 text-white text-center rounded hover:bg-green-700">Get Funded</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="min-h-screen bg-gradient-to-b from-black to-green-900 py-16">
+    <div class="container mx-auto px-6 lg:px-20 text-white">
+
+        <h1 class="text-5xl font-extrabold text-center mb-4">Checkout</h1>
+        <p class="text-center text-gray-300 mb-12">
+        Almost there, please fill up all the information and get your funded trading account.
+        </p>
+
+        <form id="checkoutForm" class="grid lg:grid-cols-2 gap-10">
+
+        <!-- Left Column: Account Info -->
+        <div class="space-y-6">
+            <!-- Account Type -->
+            <div class="bg-gradient-to-br from-gray-900 to-green-900 p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4">Account Information</h2>
+            <h4 class="mb-4">Account Type</h4>
+            <div class="flex flex-wrap gap-3 mb-4">
+                <button type="button" class="px-4 py-2 rounded-md bg-green-600 text-white">Step 1</button>
+                <button type="button" class="px-4 py-2 rounded-md bg-gray-800">Step 2</button>
+                <button type="button" class="px-4 py-2 rounded-md bg-gray-800">Rapid</button>
+            </div>
+
+            <!-- Account Size -->
+            <div class="flex flex-wrap gap-3 mb-4">
+                <label><input type="radio" name="account_size" value="5000" class="hidden peer">
+                <span class="px-4 py-2 rounded-md bg-gray-800 peer-checked:bg-green-600"> $5,000 </span>
+                </label>
+                <label><input type="radio" name="account_size" value="10000" class="hidden peer">
+                <span class="px-4 py-2 rounded-md bg-gray-800 peer-checked:bg-green-600"> $10,000 </span>
+                </label>
+                <label><input type="radio" name="account_size" value="25000" class="hidden peer">
+                <span class="px-4 py-2 rounded-md bg-gray-800 peer-checked:bg-green-600"> $25,000 </span>
+                </label>
+                <label><input type="radio" name="account_size" value="50000" class="hidden peer" checked>
+                <span class="px-4 py-2 rounded-md bg-green-600 text-white"> $50,000 </span>
+                </label>
+                <label><input type="radio" name="account_size" value="100000" class="hidden peer">
+                <span class="px-4 py-2 rounded-md bg-gray-800 peer-checked:bg-green-600"> $100,000 </span>
+                </label>
+                <label><input type="radio" name="account_size" value="200000" class="hidden peer">
+                <span class="px-4 py-2 rounded-md bg-gray-800 peer-checked:bg-green-600"> $200,000 </span>
+                </label>
+            </div>
+
+            <!-- Platform -->
+            <div class="flex flex-wrap gap-3">
+                <label><input type="radio" name="platform" value="mt4" class="hidden peer">
+                <span class="px-4 py-2 rounded-md bg-gray-800 peer-checked:bg-green-600"> MT4 </span>
+                </label>
+                <label><input type="radio" name="platform" value="mt5" class="hidden peer" checked>
+                <span class="px-4 py-2 rounded-md bg-green-600 text-white"> MT5 </span>
+                </label>
+                <label><input type="radio" name="platform" value="dxt" class="hidden peer">
+                <span class="px-4 py-2 rounded-md bg-gray-800 peer-checked:bg-green-600"> DXTrade </span>
+                </label>
+                <label><input type="radio" name="platform" value="tradelocker" class="hidden peer">
+                <span class="px-4 py-2 rounded-md bg-gray-800 peer-checked:bg-green-600"> Tradelocker </span>
+                </label>
+            </div>
+            </div>
+
+            <!-- Addons -->
+            <div class="bg-gradient-to-br from-gray-900 to-green-900 p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4">Available Addons</h2>
+            <label class="flex items-center gap-3">
+                <input type="checkbox" name="addon_payout" value="7day" class="form-checkbox text-green-600">
+                <span>7 Day Payout (+20%)</span>
+            </label>
+            </div>
+
+            <!-- Coupon -->
+            <div class="bg-gradient-to-br from-gray-900 to-green-900 p-6 rounded-lg shadow-md">
+            <label class="block mb-2 font-semibold">Enter Coupon Code</label>
+            <div class="flex gap-2">
+                <input type="text" name="coupon" class="flex-grow rounded-md p-2 bg-gray-800 text-white border border-gray-700">
+                <button type="button" class="px-4 py-2 bg-green-600 rounded-md">Apply</button>
+            </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="bg-gradient-to-br from-gray-900 to-green-900 p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4">Order Summary</h2>
+            <p class="flex justify-between"><span>1 Step – $50,000 – MT4</span><span>$275.00</span></p>
+            <p class="flex justify-between"><span>Subtotal</span><span>$275.00</span></p>
+            <p class="flex justify-between font-bold"><span>Total</span><span>$275.00</span></p>
+            <p class="text-sm text-gray-400 mt-2">Estimated Total in Local Currency: 24,274.04 INR</p>
+            </div>
+        </div>
+
+        <!-- Right Column: Customer Info -->
+        <div class="space-y-6">
+            <!-- Customer Info -->
+            <div class="bg-gradient-to-br from-gray-900 to-green-900 p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4">1. Customer Information</h2>
+            <input type="email" name="email" placeholder="Email Address" class="w-full mb-3 p-2 rounded-md bg-gray-800 border border-gray-700 text-white">
+            </div>
+
+            <!-- Billing -->
+            <div class="bg-gradient-to-br from-gray-900 to-green-900 p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4">2. Billing Details</h2>
+            <div class="grid grid-cols-2 gap-3 mb-3">
+                <input type="text" name="first_name" placeholder="First Name*" class="p-2 rounded-md bg-gray-800 border border-gray-700 text-white">
+                <input type="text" name="last_name" placeholder="Last Name*" class="p-2 rounded-md bg-gray-800 border border-gray-700 text-white">
+            </div>
+            <input type="text" name="country" placeholder="Country" value="India" class="w-full mb-3 p-2 rounded-md bg-gray-800 border border-gray-700 text-white">
+            <input type="text" name="address" placeholder="House number and street name" class="w-full mb-3 p-2 rounded-md bg-gray-800 border border-gray-700 text-white">
+            <input type="text" name="address2" placeholder="Apartment, suite, etc. (optional)" class="w-full mb-3 p-2 rounded-md bg-gray-800 border border-gray-700 text-white">
+            <input type="text" name="city" placeholder="Town / City" class="w-full mb-3 p-2 rounded-md bg-gray-800 border border-gray-700 text-white">
+            <input type="text" name="state" placeholder="State" class="w-full mb-3 p-2 rounded-md bg-gray-800 border border-gray-700 text-white">
+            <input type="text" name="zip" placeholder="PIN Code" class="w-full mb-3 p-2 rounded-md bg-gray-800 border border-gray-700 text-white">
+            <input type="text" name="company" placeholder="Company Name" class="w-full mb-3 p-2 rounded-md bg-gray-800 border border-gray-700 text-white">
+            <input type="text" name="phone" placeholder="Phone Number" class="w-full mb-3 p-2 rounded-md bg-gray-800 border border-gray-700 text-white">
+            <select name="currency" class="w-full mb-3 p-2 rounded-md bg-gray-800 border border-gray-700 text-white">
+                <option value="USD">USD</option>
+                <option value="INR">INR</option>
+                <option value="EUR">EUR</option>
+            </select>
+            </div>
+
+            <!-- Payment -->
+            <div class="bg-gradient-to-br from-gray-900 to-green-900 p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4">3. Choose Payment Method</h2>
+            <label class="flex items-center gap-2 mb-3">
+                <input type="radio" name="payment_method" value="blueberry" checked>
+                <span>Pay Now via Blueberry Cashier</span>
+            </label>
+            <p class="text-sm text-gray-400">
+                Click <span class="font-bold text-green-400">Place Order</span> below to pay via a variety of methods such as Credit/Debit Card, 
+                Crypto, or local methods including UPI, IMPS, GCash, Bank Transfer, and more.
+            </p>
+            </div>
+
+            <!-- Submit -->
+            <div class="text-center">
+            <button type="submit" class="px-6 py-3 bg-green-600 hover:bg-green-700 transition rounded-md font-bold">
+                Place Order
+            </button>
+            <p class="text-sm text-gray-400 mt-2">All payments are secured and encrypted</p>
+            </div>
+        </div>
+        </form>
+    </div>
+    </main>
+
+
+
+
+
+  <!-- FOOTER -->
+  <footer id="footer" class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
+      
+      <!-- About -->
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-4">Skill<span class="text-green-500">Trade</span></h2>
+        <p class="mb-6">SkillTrade is a prop firm, where we aim to take on the prop trading space by providing sustainable trading challenges with customer service, technology, and efficient payouts.</p>
+
+        <div>
+          <span class="block mb-2 font-semibold">Join Socials</span>
+          <div class="flex gap-4 text-xl">
+            <a href="https://www.instagram.com/skil.ltrade41/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://discord.com/channels/@skilltrade._27656" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <h4 class="font-semibold text-white mb-3">Main</h4>
+          <ul class="space-y-2">
+            <li><a href="/" class="hover:text-white">Home</a></li>
+            <li><a href="/#about" class="hover:text-white">About</a></li>
+            <li><a href="/skilltrade_faqs.html" class="hover:text-white">FAQ</a></li>
+            <li><a href="/skilltrade_affiliate.html" class="hover:text-white">Affiliate</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white mb-3">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="/skilltrade_privacy_policy.html" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="/skilltrade_terms_conditions.html" class="hover:text-white">Terms & Conditions</a></li>
+            <li><a href="/skilltrade_outline_fee.html" class="hover:text-white">Outline & Fees</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="font-semibold text-white mb-3">Contact</h4>
+        <p class="mb-2">Have questions? Reach us at:</p>
+        <a href="mailto:sukhveer@skilltrade.in" class="text-green-400 hover:text-green-300">
+          sukhveer@skilltrade.in
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: false });
+  </script>
+</body>
+</html>

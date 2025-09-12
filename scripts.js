@@ -402,3 +402,40 @@ document.addEventListener("mousemove", (e) => {
     star.style.setProperty("--offsetY", `${offsetY / depth}px`);
   });
 });
+
+
+
+// Checkout form
+//--------------------------------------------------------------
+document.getElementById("checkoutForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  // Collect form data
+  const formData = new FormData(this);
+  const payload = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch("https://your-backend-domain.com/api/checkout/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      throw new Error("Checkout failed");
+    }
+
+    const data = await response.json();
+    alert("✅ Order placed successfully! Order ID: " + data.order_id);
+
+    // Redirect if backend returns a payment URL
+    if (data.payment_url) {
+      window.location.href = data.payment_url;
+    }
+  } catch (error) {
+    console.error(error);
+    alert("❌ Something went wrong while placing your order.");
+  }
+});
